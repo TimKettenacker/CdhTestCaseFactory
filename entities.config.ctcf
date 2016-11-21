@@ -1,0 +1,88 @@
+<config>
+	<entity name="record">
+		<entity name="party" caption="party">
+			<field name="type" caption="Party-Typ" type="enum" enum="party_type" nullable="false" />
+			<field name="prevent_match" caption="Gewollte Dublette" type="boolean" nullable="true" />
+			<field name="person_form_of_address" caption="Anrede1" enum="foa_type" type="string" nullable="true" size="100" />
+			<field name="person_qualification_preceding" caption="Titel1" type="string" nullable="true" size="100" />
+			<field name="person_surname_first" caption="Nachname1" type="string" nullable="true" size="100" />
+			<field name="person_given_names_full" caption="Vorname1" type="string" nullable="true" size="100" />
+			<field name="person_gender" caption="Geschlecht1" enum="gender_type" type="string" nullable="true" size="100" />
+			<field name="person_date_of_birth" caption="Geburtsdatum1" type="date" nullable="true" />
+			<field name="person_birth_name" caption="Geburtsname1" type="string" nullable="true" size="100" />
+			<field name="person_tax_id" caption="Steuer-ID Person 1" type="string" nullable="true" size="100" />
+			<field name="person_ssn" caption="SozialVers Nr. Person 1" type="string" nullable="true" size="100" />
+			<field name="person_form_of_address2" caption="Anrede2" enum="foa_type" type="string" nullable="true" size="100" />
+			<field name="person_qualification_preceding2" caption="Titel2" type="string" nullable="true" size="100" />
+			<field name="person_surname_first2" caption="Nachname2" type="string" nullable="true" size="100" />
+			<field name="person_given_names_full2" caption="Vorname2" type="string" nullable="true" size="100" />
+			<field name="person_gender2" caption="Geschlecht2" enum="gender_type" type="string" nullable="true" size="100" />
+			<field name="person_date_of_birth2" caption="Geburtsdatum2" type="date" nullable="true" />
+			<field name="person_tax_id2" caption="Steuer-ID Person 2" type="string" nullable="true" size="100" />
+			<field name="person_ssn2" caption="SozialVers Nr. Person 2" type="string" nullable="true" size="100" />
+			<field name="name_rest" caption="Nicht erkannter Namensrest" type="string" nullable="true" size="100" />
+			<field name="birthplace" caption="Geburtsort" type="string" nullable="true" size="100" />
+			<field name="nationality" caption="Nationalitaet" type="string" nullable="true" size="100" />
+			<field name="pers_status" caption="PersStatus" enum="pers_status_type" type="string" nullable="true" size="100" />
+			<field name="organization_name" caption="NameJurPerson" type="string" nullable="true" size="100" />
+			<field name="organization_legal_type" caption="Rechtsform" enum="company_legal_form_type" type="string" nullable="true" size="100" />
+			<field name="name_input" caption="Name Input zur Namenskonvertierung" type="string" nullable="true" size="100" />
+			<field name="dat_last_change" caption="Datum letzte Aenderung" type="date" nullable="true" />
+			<field name="time_last_change" caption="Uhrzeit letzte Aenderung" type="string" nullable="true" size="100" />
+		</entity>
+		<entity name="postal_address" caption="postal_address">
+			<field name="type" caption="Adresstyp" type="enum" enum="address_type" nullable="false" />
+			<field name="str" caption="Strasse" type="string" nullable="true" size="100" />
+			<field name="hno" caption="Hausnummer" type="string" nullable="true" size="100" />
+			<field name="hno_addition" caption="Hausnummernzusatz" type="string" nullable="true" size="100" />
+			<field name="zip" caption="PLZ" type="string" nullable="true" size="100" />
+			<field name="city" caption="Ort" type="string" nullable="true" size="100" />
+			<field name="city_district" caption="Teilort" type="string" nullable="true" size="100" />
+			<field name="pobox" caption="Postfach" type="string" nullable="true" size="100" />
+			<field name="pobox_zip" caption="Postfach PLZ" type="string" nullable="true" size="100" />
+			<field name="country_code" caption="Laenderkennzeichen" enum="country_iso3166-1-alpha-2" type="string" nullable="true" size="100" />
+			<field name="region" caption="Region" type="string" nullable="true" size="100" />
+			<field name="gkz" caption="Gemeinde-Kreis-Kennzeichen" type="string" nullable="true" size="100" />
+			<field name="anrede_zustverm" caption="Anrede Zustellvermerk" type="enum" enum="anr_zust_type" nullable="true" />
+			<field name="delivery_addition" caption="Zustellvermerk" type="string" nullable="true" size="100" />
+			<field name="unbek_verzogen" caption="Unbekannt verzogen" type="boolean" nullable="true" />
+			<field name="building_name" caption="Gebaeudename" type="string" nullable="true" size="100" />
+			<field name="sub_building_name" caption="Gebaeudeteil" type="string" nullable="true" size="100" />
+			<field name="organization" caption="Organisation" type="string" nullable="true" size="100" />
+			<field name="sec" caption="Secondary" type="string" nullable="true" size="100" />
+			<field name="state" caption="State" type="string" nullable="true" size="100" />
+			<field name="zip_add_on" caption="ZIP Add-on" type="string" nullable="true" size="100" />
+			<field name="major_str" caption="Major Street" type="string" nullable="true" size="100" />
+			<field name="community" caption="Community" type="string" nullable="true" size="100" />
+			<field name="county" caption="County" type="string" nullable="true" size="100" />
+			<field name="dep_district" caption="Department District" type="string" nullable="true" size="100" />
+			<field name="dat_last_change" caption="Datum letzte Aenderung" type="date" nullable="true" />
+			<field name="time_last_change" caption="Uhrzeit letzte Aenderung" type="string" nullable="true" size="100" />
+		</entity>
+		<entity name="email_address" caption="email_address">
+			<field name="type" caption="Typ E-Mail-Adresse" type="enum" enum="email_address_type" nullable="false" />
+			<field name="address" caption="E-Mail-Adresse" type="string" nullable="true" size="100" />
+		</entity>
+		<entity name="telecom" caption="telecom">
+			<field name="type" caption="Typ Telefon" type="enum" enum="telecom_type" nullable="false" />
+			<field name="country_code" caption="Laendervorwahl" type="string" nullable="true" size="100" />
+			<field name="area_code" caption="Vorwahl" type="string" nullable="true" size="100" />
+			<field name="contact_number" caption="Rufnummer" type="string" nullable="true" size="100" />
+			<field name="extension" caption="Durchwahl" type="string" nullable="true" size="100" />
+		</entity>
+		<entity name="relation" caption="relation">
+			<field name="relation_type" caption="Beziehungsart" type="string" nullable="true" size="100" />
+		</entity>
+		<entity name="contract" caption="contract">
+			<field name="vertragsnummer" caption="Vertragsnummer" type="string" nullable="true" size="100" />
+			<field name="unternehmen" caption="Unternehmen" type="string" nullable="true" size="100" />
+			<field name="quelle" caption="Quelle" type="string" nullable="true" size="100" />
+			<field name="betreuende_agentur" caption="Betreuende Agentur" type="string" nullable="true" size="100" />
+			<field name="produktschluessel" caption="Produktschluessel" type="string" nullable="true" size="100" />
+			<field name="vertragsstatus_type" caption="Vertragsstatus" type="string" nullable="true" size="100" />
+			<field name="rolle" caption="Rolle" type="string" nullable="true" size="100" />
+			<field name="dat_last_change" caption="Datum letzte Aenderung" type="date" nullable="true" />
+			<field name="time_last_change" caption="Uhrzeit letzte Aenderung" type="string" nullable="true" size="100" />
+		</entity>
+	</entity>
+</config>
